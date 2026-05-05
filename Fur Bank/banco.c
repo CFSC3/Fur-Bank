@@ -108,19 +108,19 @@ void menu(){
 };
 
 void  infoCliente(Cliente cliente){ //Mostra as informações do cliente
-    printf(" Código: %d\n", cliente.codigo);
-    printf(" Nome: %s\n", strtok(cliente.nome, "\n"));
-    printf(" Data de nascimento: %s\n", strtok(cliente.data_nascimento, "\n"));
-    printf(" Cadastro: %s\n", strtok(cliente.data_cadastro, "\n"));
+    printf("Código: %d\n", cliente.codigo);
+    printf("Nome: %s\n", strtok(cliente.nome, "\n"));
+    printf("Data de nascimento: %s\n", strtok(cliente.data_nascimento, "\n"));
+    printf("Cadastro: %s\n\n", strtok(cliente.data_cadastro, "\n"));
 
 };
 
 void infoConta(Conta conta){ //Mostra as informações da conta
-    printf(" Número da conta: %d\n", conta.numero);
-    printf(" Cliente: %s\n", strtok(conta.cliente.nome, "\n"));
-    printf(" Data de nascimento: %s\n", strtok(conta.cliente.data_nascimento, "\n"));
-    printf(" Data Cadastro: %s\n", strtok(conta.cliente.data_cadastro, "\n"));
-    printf(" Saldo total: R$ %.2f\n", conta.saldo_total);
+    printf("Número da conta: %d\n", conta.numero);
+    printf("Cliente: %s\n", strtok(conta.cliente.nome, "\n"));
+    printf("Data de nascimento: %s\n", strtok(conta.cliente.data_nascimento, "\n"));
+    printf("Data Cadastro: %s\n", strtok(conta.cliente.data_cadastro, "\n"));
+    printf("Saldo total: R$ %.2f\n\n", conta.saldo_total);
 
 };
 
@@ -393,7 +393,6 @@ void listarContas(){ //Lista as contas cadastradas, verificando se há contas ca
         for(int i = 0; i < contadorContas; i++){
             printf("Conta %d:\n", contas[i].numero);
             infoConta(contas[i]);
-            printf("\n");
             Sleep(1000); //tempo de resposta do programa em 1 segundo para mostrar as informações de cada conta, caso contrário, as informações de todas as contas seriam mostradas de uma vez, o que poderia ser confuso para o usuário, caso haja muitas contas cadastradas
         };
     } else {
